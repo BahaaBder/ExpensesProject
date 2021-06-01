@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // Mongoose setup
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/expenseDB', { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/expenseDB', { useNewUrlParser: true })
 
 app.use('/', api)
 
