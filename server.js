@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/expenseDB', { u
 
 app.use('/', api)
 
-const PORT = 4200
+const PORT = 8080
 app.listen(process.env.PORT || PORT, function() {
     console.log(`Running on port ${port}`)
 })
